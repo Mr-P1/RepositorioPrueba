@@ -1,0 +1,12 @@
+<section>
+  <h2>Registro</h2>
+  <h2>Fecha: {{registro.fecha | date:' h:mm a,M/d/yy' }}</h2>
+  <app-lista-alumno [alumnos]="listarAlumnos"></app-lista-alumno>
+
+  <H3>Rut: {{registro.TAlumno.Rut}}</H3>
+  <H3>Nombre: {{registro.TAlumno.Nombre}}</H3>
+  <H3>Apellido: {{registro.TAlumno.Apellido}}</H3>
+  <H3>Edad:{{registro.TAlumno.Edad}}</H3>
+  <H3>ID Seccion: {{registro.TAlumno.TSeccion.Id}}</H3>
+  <H3>Nombre Seccion: {{registro.TAlumno.TSeccion.NombreSeccion}}</H3>
+</section>

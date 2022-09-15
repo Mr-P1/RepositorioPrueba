@@ -1,0 +1,23 @@
+<h2>Crear Seccion</h2>
+<app-formulario-seccion (enviarSeccion)="escucharSeccion($event)"></app-formulario-seccion>
+
+<select>
+  <option
+  *ngFor = "let x of listarSecciones"
+  [value]="x">{{x.NombreSeccion}}</option>
+</select>
+
+<hr><h2>Crear Usuario</h2>
+<app-formulario-alumno (enviarAlumno)="escucharAlumno($event)" [secciones]="listarSecciones"></app-formulario-alumno>
+
+
+<br><br><hr>
+<h2>Lista Alumnos</h2>
+<app-lista-alumno
+[alumnos]="listarAlumnos"></app-lista-alumno>
+
+
+<br><br><hr>
+<app-lista-historial
+[registros]="listarRegistros"
+></app-lista-historial>

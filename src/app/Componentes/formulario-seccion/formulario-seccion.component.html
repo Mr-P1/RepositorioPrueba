@@ -1,0 +1,17 @@
+<section>
+
+  <fieldset>
+    <label >Ingrese Id</label>
+    <input type="number" [value]="seccion.Id" (input)="cId($event)">
+  </fieldset>
+
+  <fieldset>
+    <label >Ingrese nombre de la seccion</label>
+    <input type="text" [value]="seccion.NombreSeccion" (input)="cNo($event)">
+  </fieldset>
+
+  <fieldset>
+    <button type="button" (click)="guardarSeccion()">Guardar Seccion</button>
+  </fieldset>
+
+</section>

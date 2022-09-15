@@ -1,0 +1,47 @@
+<section>
+  <fieldset>
+    <label >Ingrese Rut</label>
+    <input type="number"[value]="alumno.Rut" (input)="cRut($event)">
+  </fieldset>
+  <fieldset>
+    <label >Ingrese Nombre</label>
+    <input type="text"[value]="alumno.Nombre" (input)="cNom($event)">
+  </fieldset>
+  <fieldset>
+    <label >Ingrese Apellido</label>
+    <input type="text"[value]="alumno.Apellido" (input)="cAp($event)">
+  </fieldset>
+  <fieldset>
+    <label >Ingrese Edad</label>
+    <input type="number"[value]="alumno.Edad" (input)="cEd($event)">
+  </fieldset>
+
+  <!-- <fieldset>
+    <label for="">Selecione seccion</label>
+    <select [value]="alumno.TSeccion.Id" (change)="cSi($event)">
+      <option
+      *ngFor="let x of secciones"
+      value="x.Id">{{x.Id}}</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label for="">Selecione seccion</label>
+    <select [value]="alumno.TSeccion.NombreSeccion" (change)="cSo($event)">
+      <option
+      *ngFor="let x of secciones"
+      value="x.NombreSeccion">{{x.NombreSeccion}}</option>
+    </select>
+  </fieldset> -->
+
+
+  <fieldset>
+    <label >Selecione seccion</label>
+    <select [value]="alumno.TSeccion" (change)="cSe($event)">
+      <option
+      *ngFor = "let x of secciones"
+      [value]="x">{{x.NombreSeccion}}</option>
+    </select>
+  </fieldset>
+
+  <fieldset><button type="button" (click)="guardarAlumno()">Guardar</button></fieldset>
+</section>
